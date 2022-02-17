@@ -33,6 +33,22 @@ def up():
     gui.configure(bg=Colors(clicks))
     print(clicks)
 
+def up2(e):
+    global clicks, checks
+    clicks += 1
+    Button.config(text=clicks)
+    checks ="up"
+    gui.configure(bg=Colors(clicks))
+    print(clicks)
+
+def down2(e):
+    global clicks, checks
+    clicks -= 1
+    Button.config(text=clicks)
+    checks ="down"
+    gui.configure(bg=Colors(clicks))
+    print(clicks)
+
 def down():
     global clicks, checks
     clicks -= 1
@@ -96,6 +112,9 @@ ButtonUp.bind("<Enter>", Enter)
 ButtonUp.bind("<Leave>", Leave)
 ButtonDown.bind("<Enter>", Enter)
 ButtonDown.bind("<Leave>", Leave)
-Button.bind('<Double-Button>', doubleclicks)
+Button.bind("<Double-Button>", doubleclicks)
+gui.bind("<Up>", up2)
+gui.bind("<Down>", down2)
+gui.bind("<space>", doubleclicks)
 # alle tkinter code komt hier tussen
 gui.mainloop()
