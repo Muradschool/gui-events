@@ -11,7 +11,7 @@ checks = " "
 # alle tkinter code komt hier tussen
 gui = tk.Tk()
 
-gui.title("Clicker V1")
+gui.title("Clicker V4")
 gui.geometry("500x500")
 gui.config(bg= "gray")
 clicks = 0 
