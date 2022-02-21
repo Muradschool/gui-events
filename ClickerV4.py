@@ -95,5 +95,8 @@ ButtonUp.bind("<Leave>", Leave)
 ButtonDown.bind("<Enter>", Enter)
 ButtonDown.bind("<Leave>", Leave)
 Button.bind("<Double-Button>", doubleclicks)
+gui.bind("<Up>", up)
+gui.bind("<Down>", down)
+gui.bind("<space>", doubleclicks)
 # alle tkinter code komt hier tussen
 gui.mainloop()
